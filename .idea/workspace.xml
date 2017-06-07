@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="169868f6-c864-4876-af4d-e51fc604820c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/IDefaultValueProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/IOSChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/OSChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProviderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/HelloWorldBuilder/config.jelly" afterPath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/config.jelly" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/HelloWorldBuilder/global.jelly" afterPath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/global.jelly" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/HelloWorldBuilder/help-name.html" afterPath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/help-bootstrapperScript.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/HelloWorldBuilder/help-useFrench.html" afterPath="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/help-useFrench.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +41,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DefaultValueProviderTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DefaultValueProviderTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProviderTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
                   <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -162,6 +163,7 @@
         <option value="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/OSCheckerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/OSCheckerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProviderTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -671,12 +673,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496834268403</updated>
       <workItem from="1496834271421" duration="1010000" />
-      <workItem from="1496835517466" duration="3036000" />
+      <workItem from="1496835517466" duration="3132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4046000" />
+    <option name="totallyTimeSpent" value="4142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1065" extended-state="6" />
@@ -921,6 +923,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
