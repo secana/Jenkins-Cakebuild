@@ -42,9 +42,9 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
 
     // Fields in config.jelly must match the parameter names in the "DataBoundConstructor"
     @DataBoundConstructor
-    public JenkinsCakeBuild(String boostrapperScript, String cakeScript, String target, String arguments) {
+    public JenkinsCakeBuild(String bootstrapperScipt, String cakeScript, String target, String arguments) {
 
-        this.bootstrapperScipt = boostrapperScript;
+        this.bootstrapperScipt = bootstrapperScipt;
         this.cakeScript = cakeScript;
         this.target = target;
         this.arguments = arguments;
@@ -68,11 +68,10 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
         // This is where you 'build' the project.
         // Since this is a dummy, we just say 'hello world' and call that a build.
 
-        // This also shows how you can consult the global configuration of the builder
-        if (getDescriptor().getUseFrench())
-            listener.getLogger().println("Bonjour, "+bootstrapperScipt+"!");
-        else
-            listener.getLogger().println("Hello, "+bootstrapperScipt+"!");
+        listener.getLogger().println("Bootstrapper script: " + bootstrapperScipt);
+        listener.getLogger().println("Cake script: " + cakeScript);
+        listener.getLogger().println("Target: " + target);
+        listener.getLogger().println("Arguments: " + arguments);
     }
 
     // Overridden for better type safety.

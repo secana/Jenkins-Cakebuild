@@ -13,8 +13,8 @@
   <f:entry title="Target" field="target">
     <f:textbox />
   </f:entry>
-  <f:optionalBlock name="advanced" title="Advanced Settings">
-    <f:entry title="Bootstrapper Script" field="boostrapperScript">
+  <!-- <f:optionalBlock name="advanced" title="Advanced Settings"> -->
+    <f:entry title="Bootstrapper Script" field="bootstrapperScipt">
       <f:textbox />
     </f:entry>
     <f:entry title="Cake Script" field="cakeScript">
@@ -23,5 +23,5 @@
     <f:entry title="Arguments" field="arguments">
       <f:textbox />
     </f:entry>
-  </f:optionalBlock>
+  <!-- </f:optionalBlock> -->
 </j:jelly>
