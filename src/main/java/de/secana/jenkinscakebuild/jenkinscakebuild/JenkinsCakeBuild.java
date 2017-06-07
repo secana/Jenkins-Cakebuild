@@ -25,7 +25,7 @@ import java.io.IOException;
  * {@link DescriptorImpl#newInstance(StaplerRequest)} is invoked
  * and a new {@link JenkinsCakeBuild} is created. The created
  * instance is persisted to the project configuration XML by using
- * XStream, so this allows you to use instance fields (like {@link #name})
+ * XStream, so this allows you to use instance fields (like {@link #bootstrapperScipt})
  * to remember the configuration.
  *
  * <p>
@@ -35,20 +35,33 @@ import java.io.IOException;
  */
 public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
 
-    private final String name;
+    private final String bootstrapperScipt;
+    private final String cakeScript;
+    private final String target;
+    private final String arguments;
 
     // Fields in config.jelly must match the parameter names in the "DataBoundConstructor"
     @DataBoundConstructor
-    public JenkinsCakeBuild(String name) {
-        this.name = name;
+    public JenkinsCakeBuild(String boostrapperScript, String cakeScript, String target, String arguments) {
+
+        this.bootstrapperScipt = boostrapperScript;
+        this.cakeScript = cakeScript;
+        this.target = target;
+        this.arguments = arguments;
     }
 
     /**
      * We'll use this from the {@code config.jelly}.
      */
-    public String getName() {
-        return name;
+    public String getBootstrapperScipt() {
+        return bootstrapperScipt;
     }
+
+    public String getCakeScript() { return cakeScript; }
+
+    public String getTarget() { return target; }
+
+    public String getArguments() { return arguments; }
 
     @Override
     public void perform(Run<?,?> build, FilePath workspace, Launcher launcher, TaskListener listener) {
@@ -57,9 +70,9 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
 
         // This also shows how you can consult the global configuration of the builder
         if (getDescriptor().getUseFrench())
-            listener.getLogger().println("Bonjour, "+name+"!");
+            listener.getLogger().println("Bonjour, "+bootstrapperScipt+"!");
         else
-            listener.getLogger().println("Hello, "+name+"!");
+            listener.getLogger().println("Hello, "+bootstrapperScipt+"!");
     }
 
     // Overridden for better type safety.
@@ -127,7 +140,7 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
          * This human readable name is used in the configuration screen.
          */
         public String getDisplayName() {
-            return "Say hello world";
+            return "Cake Build";
         }
 
         @Override

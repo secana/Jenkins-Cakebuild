@@ -1,0 +1,9 @@
+de/secana/jenkinscakebuild/jenkinscakebuild/IDefaultValueProvider.class
+de/secana/jenkinscakebuild/jenkinscakebuild/OSChecker.class
+de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProvider.class
+de/secana/jenkinscakebuild/jenkinscakebuild/IOSChecker.class
+de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.class
+de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild$DescriptorImpl.class
+de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.stapler
+de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/DescriptorImpl/doCheckName.stapler
+META-INF/annotations/hudson.Extension

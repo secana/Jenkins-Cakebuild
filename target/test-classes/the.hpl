@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Group-Id: de.secana.jenkinscakebuild
+Short-Name: jenkins-cakebuild
+Long-Name: Jenkins-CakeBuild
+Url: https://wiki.jenkins-ci.org/display/JENKINS/TODO+Plugin
+Plugin-Version: 1.0-SNAPSHOT (private-a440f0cb-hausi)
+Hudson-Version: 1.625.3
+Jenkins-Version: 1.625.3
+Plugin-Developers: 
+Libraries: /home/hausi/Git/Jenkins-Cakebuild/src/main/resources,/home/
+ hausi/Git/Jenkins-Cakebuild/target/classes,/home/hausi/.m2/repository
+ /junit/junit/4.10/junit-4.10.jar,/home/hausi/.m2/repository/org/hamcr
+ est/hamcrest-core/1.1/hamcrest-core-1.1.jar
+Resource-Path: /home/hausi/Git/Jenkins-Cakebuild/src/main/webapp
+
