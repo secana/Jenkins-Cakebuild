@@ -13,15 +13,18 @@
   <f:entry title="Target" field="target">
     <f:textbox />
   </f:entry>
-  <!-- <f:optionalBlock name="advanced" title="Advanced Settings"> -->
-    <f:entry title="Bootstrapper Script" field="bootstrapperScipt">
-      <f:textbox />
-    </f:entry>
-    <f:entry title="Cake Script" field="cakeScript">
-      <f:textbox />
-    </f:entry>
-    <f:entry title="Arguments" field="arguments">
-      <f:textbox />
-    </f:entry>
-  <!-- </f:optionalBlock> -->
+
+  <f:section title="Advanced Cake Options">
+    <f:advanced>
+      <f:entry title="Bootstrapper Script" field="bootstrapperScipt">
+        <f:textbox />
+      </f:entry>
+      <f:entry title="Cake Script" field="cakeScript">
+        <f:textbox />
+      </f:entry>
+      <f:entry title="Arguments" field="arguments">
+        <f:textbox />
+      </f:entry>
+    </f:advanced>
+  </f:section>
 </j:jelly>
