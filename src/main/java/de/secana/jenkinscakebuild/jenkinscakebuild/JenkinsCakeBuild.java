@@ -35,19 +35,46 @@ import java.io.IOException;
  */
 public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
 
-    private final String bootstrapperScipt;
-    private final String cakeScript;
-    private final String target;
-    private final String arguments;
+    private String bootstrapperScipt;
+    private String cakeScript;
+    private String target;
+    private String arguments;
 
     // Fields in config.jelly must match the parameter names in the "DataBoundConstructor"
     @DataBoundConstructor
     public JenkinsCakeBuild(String bootstrapperScipt, String cakeScript, String target, String arguments) {
 
-        this.bootstrapperScipt = bootstrapperScipt;
-        this.cakeScript = cakeScript;
-        this.target = target;
+        DefaultValueProvider defaultValueProvider = new DefaultValueProvider(new OSChecker());
+        SetParameters(bootstrapperScipt, cakeScript, target, arguments, defaultValueProvider);
+    }
+
+    public void SetParameters(
+            String bootstrapperScipt,
+            String cakeScript,
+            String target,
+            String arguments,
+            DefaultValueProvider defaultValueProvider)
+    {
         this.arguments = arguments;
+
+        if(target != null)
+        {
+            this.target = defaultValueProvider.GetTargetParameter() + " " + target;
+        }
+
+        if(bootstrapperScipt == null) {
+            this.bootstrapperScipt = defaultValueProvider.GetBootstrapperScriptName();
+        }
+        else {
+            this.bootstrapperScipt = bootstrapperScipt;
+        }
+
+        if(cakeScript == null) {
+            this.cakeScript = defaultValueProvider.GetCakeScriptName();
+        }
+        else {
+            this.cakeScript = cakeScript;
+        }
     }
 
     /**
