@@ -13,12 +13,11 @@ public class JenkinsCakeBuildTest {
         OSChecker osChecker = mock(OSChecker.class);
         when(osChecker.IsLinux()).thenReturn(true);
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
-        JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null, null);
+        JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null);
 
-        jenkinsCakeBuild.SetParameters(null, null, null, null, defaultValueProvider);
+        jenkinsCakeBuild.SetParameters(null,null, null, defaultValueProvider);
 
         assertEquals("build.sh", jenkinsCakeBuild.getBootstrapperScipt());
-        assertEquals("build.cake", jenkinsCakeBuild.getCakeScript());
         assertEquals(null, jenkinsCakeBuild.getTarget());
         assertEquals(null, jenkinsCakeBuild.getArguments());
     }
@@ -28,14 +27,37 @@ public class JenkinsCakeBuildTest {
         OSChecker osChecker = mock(OSChecker.class);
         when(osChecker.IsLinux()).thenReturn(true);
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
-        JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null, null);
+        JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null);
 
-        jenkinsCakeBuild.SetParameters("booty", "cakey", "targy", "argy", defaultValueProvider);
+        jenkinsCakeBuild.SetParameters("booty","targy", "argy", defaultValueProvider);
 
         assertEquals("booty", jenkinsCakeBuild.getBootstrapperScipt());
-        assertEquals("cakey", jenkinsCakeBuild.getCakeScript());
         assertEquals("--target targy", jenkinsCakeBuild.getTarget());
         assertEquals("argy", jenkinsCakeBuild.getArguments());
+    }
+
+    @Test
+    public void buildCakeCommand_Input_ReturnsCorrectCommand(){
+        OSChecker osChecker = mock(OSChecker.class);
+        when(osChecker.IsLinux()).thenReturn(true);
+        JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild("boot.sh", "mytarget", "-foo=\"bar\"");
+
+        String command = jenkinsCakeBuild.BuildCakeCommand();
+
+        assertEquals("boot.sh --target mytarget -foo=\"bar\"", command);
+    }
+
+    @Test
+    public void buildCakeCommand_NoInput_ReturnsCorrectCommand(){
+        OSChecker osChecker = mock(OSChecker.class);
+        when(osChecker.IsLinux()).thenReturn(true);
+        DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
+        JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null);
+        jenkinsCakeBuild.SetParameters(null, null, null, defaultValueProvider);
+
+        String command = jenkinsCakeBuild.BuildCakeCommand();
+
+        assertEquals("build.sh", command);
     }
 
 }

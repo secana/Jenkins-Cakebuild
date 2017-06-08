@@ -19,9 +19,6 @@
       <f:entry title="Bootstrapper Script" field="bootstrapperScipt">
         <f:textbox />
       </f:entry>
-      <f:entry title="Cake Script" field="cakeScript">
-        <f:textbox />
-      </f:entry>
       <f:entry title="Arguments" field="arguments">
         <f:textbox />
       </f:entry>

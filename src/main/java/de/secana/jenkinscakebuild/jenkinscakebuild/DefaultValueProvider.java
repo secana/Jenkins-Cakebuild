@@ -10,11 +10,6 @@ public class DefaultValueProvider implements IDefaultValueProvider {
     }
 
     @Override
-    public String GetCakeScriptName(){
-        return "build.cake";
-    }
-
-    @Override
     public String GetBootstrapperScriptName(){
         if(osChecker.IsLinux())
             return "build.sh";

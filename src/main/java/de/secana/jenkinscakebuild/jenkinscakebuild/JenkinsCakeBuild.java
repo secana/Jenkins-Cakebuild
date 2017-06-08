@@ -36,45 +36,58 @@ import java.io.IOException;
 public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
 
     private String bootstrapperScipt;
-    private String cakeScript;
     private String target;
     private String arguments;
 
     // Fields in config.jelly must match the parameter names in the "DataBoundConstructor"
     @DataBoundConstructor
-    public JenkinsCakeBuild(String bootstrapperScipt, String cakeScript, String target, String arguments) {
+    public JenkinsCakeBuild(String bootstrapperScipt, String target, String arguments) {
 
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(new OSChecker());
-        SetParameters(bootstrapperScipt, cakeScript, target, arguments, defaultValueProvider);
+        SetParameters(bootstrapperScipt, target, arguments, defaultValueProvider);
     }
 
     public void SetParameters(
             String bootstrapperScipt,
-            String cakeScript,
             String target,
             String arguments,
             DefaultValueProvider defaultValueProvider)
     {
         this.arguments = arguments;
 
-        if(target != null)
-        {
+        if(!IsEmptyOrNull(target))
             this.target = defaultValueProvider.GetTargetParameter() + " " + target;
-        }
+        else
+            this.target = null;
 
-        if(bootstrapperScipt == null) {
+        if(IsEmptyOrNull(bootstrapperScipt)) {
             this.bootstrapperScipt = defaultValueProvider.GetBootstrapperScriptName();
         }
         else {
             this.bootstrapperScipt = bootstrapperScipt;
         }
+    }
 
-        if(cakeScript == null) {
-            this.cakeScript = defaultValueProvider.GetCakeScriptName();
-        }
-        else {
-            this.cakeScript = cakeScript;
-        }
+    private boolean IsEmptyOrNull(String s){
+        if(s == null)
+            return true;
+
+        if(s.trim().isEmpty())
+            return true;
+
+        return false;
+    }
+
+    public String BuildCakeCommand(){
+        String format = String.format("%s %s %s", NullToEmpty(bootstrapperScipt), NullToEmpty(target), NullToEmpty(arguments));
+        return format.trim();
+    }
+
+    private String NullToEmpty(String s){
+        if(IsEmptyOrNull(s))
+            return "";
+
+        return s;
     }
 
     /**
@@ -83,8 +96,6 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
     public String getBootstrapperScipt() {
         return bootstrapperScipt;
     }
-
-    public String getCakeScript() { return cakeScript; }
 
     public String getTarget() { return target; }
 
@@ -95,10 +106,13 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
         // This is where you 'build' the project.
         // Since this is a dummy, we just say 'hello world' and call that a build.
 
-        listener.getLogger().println("Bootstrapper script: " + bootstrapperScipt);
-        listener.getLogger().println("Cake script: " + cakeScript);
-        listener.getLogger().println("Target: " + target);
-        listener.getLogger().println("Arguments: " + arguments);
+        listener.getLogger().println("Bootstrapper script: " + NullToEmpty(bootstrapperScipt));
+        listener.getLogger().println("Target: " + NullToEmpty(target));
+        listener.getLogger().println("Arguments: " + NullToEmpty(arguments));
+
+        String command = BuildCakeCommand();
+
+        listener.getLogger().println("Command: " + command);
     }
 
     // Overridden for better type safety.

@@ -7,15 +7,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class DefaultValueProviderTest {
-    @Test
-    public void getCakeScriptName() {
-        OSChecker osChecker = new OSChecker();
-        DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
-
-        String scriptName = defaultValueProvider.GetCakeScriptName();
-
-        assertEquals("build.cake", scriptName);
-    }
 
     @Test
     public void getBootstrapperScriptName_isLinux_ReturnsShellScript() {
