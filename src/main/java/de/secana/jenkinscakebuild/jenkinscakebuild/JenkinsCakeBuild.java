@@ -115,7 +115,7 @@ public class JenkinsCakeBuild extends Builder {
         listener.getLogger().println("Command: " + command);
 
         try {
-            Proc proc = launcher.launch("bash -c 'pwd'", build.getEnvVars(), listener.getLogger(), build.getProject().getWorkspace());
+            Proc proc = launcher.launch("./" + command, build.getEnvVars(), listener.getLogger(), build.getProject().getWorkspace());
             int exitCode = proc.join();
             return exitCode == 0;
         } catch (IOException e) {

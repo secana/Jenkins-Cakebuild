@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="169868f6-c864-4876-af4d-e51fc604820c" name="Default" comment="build command string">
+    <list default="true" id="169868f6-c864-4876-af4d-e51fc604820c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProvider.java" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProviderTest.java" afterPath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProviderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java" afterPath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="117" column="53" lean-forward="false" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+              <caret line="117" column="47" lean-forward="false" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -788,7 +785,7 @@
       <option name="presentableId" value="Default" />
       <updated>1496834268403</updated>
       <workItem from="1496834271421" duration="1010000" />
-      <workItem from="1496835517466" duration="16468000" />
+      <workItem from="1496835517466" duration="17402000" />
     </task>
     <task id="LOCAL-00001" summary="added unit test">
       <created>1496839251256</created>
@@ -825,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496908360191</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="command execution works with fake command">
+      <created>1496998091291</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1496998091291</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -861,7 +865,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17478000" />
+    <option name="totallyTimeSpent" value="18412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1065" extended-state="6" />
@@ -907,7 +911,8 @@
     <MESSAGE value="Advanced option gui works" />
     <MESSAGE value="Parser logic for arguments" />
     <MESSAGE value="build command string" />
-    <option name="LAST_COMMIT_MESSAGE" value="build command string" />
+    <MESSAGE value="command execution works with fake command" />
+    <option name="LAST_COMMIT_MESSAGE" value="command execution works with fake command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1137,7 +1142,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="117" column="53" lean-forward="false" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+          <caret line="117" column="47" lean-forward="false" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
           <folding />
         </state>
       </provider>
