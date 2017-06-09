@@ -15,9 +15,9 @@ public class JenkinsCakeBuildTest {
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
         JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null);
 
-        jenkinsCakeBuild.SetParameters(null,null, null, defaultValueProvider);
+        jenkinsCakeBuild.setParameters(null,null, null, defaultValueProvider);
 
-        assertEquals("build.sh", jenkinsCakeBuild.getBootstrapperScipt());
+        assertEquals("./build.sh", jenkinsCakeBuild.getBootstrapperScipt());
         assertEquals(null, jenkinsCakeBuild.getTarget());
         assertEquals(null, jenkinsCakeBuild.getArguments());
     }
@@ -29,7 +29,7 @@ public class JenkinsCakeBuildTest {
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
         JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null);
 
-        jenkinsCakeBuild.SetParameters("booty","targy", "argy", defaultValueProvider);
+        jenkinsCakeBuild.setParameters("booty","targy", "argy", defaultValueProvider);
 
         assertEquals("booty", jenkinsCakeBuild.getBootstrapperScipt());
         assertEquals("--target targy", jenkinsCakeBuild.getTarget());
@@ -42,7 +42,7 @@ public class JenkinsCakeBuildTest {
         when(osChecker.IsLinux()).thenReturn(true);
         JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild("boot.sh", "mytarget", "-foo=\"bar\"");
 
-        String command = jenkinsCakeBuild.BuildCakeCommand();
+        String command = jenkinsCakeBuild.buildCakeCommand();
 
         assertEquals("boot.sh --target mytarget -foo=\"bar\"", command);
     }
@@ -53,11 +53,11 @@ public class JenkinsCakeBuildTest {
         when(osChecker.IsLinux()).thenReturn(true);
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(osChecker);
         JenkinsCakeBuild jenkinsCakeBuild = new JenkinsCakeBuild(null, null, null);
-        jenkinsCakeBuild.SetParameters(null, null, null, defaultValueProvider);
+        jenkinsCakeBuild.setParameters(null, null, null, defaultValueProvider);
 
-        String command = jenkinsCakeBuild.BuildCakeCommand();
+        String command = jenkinsCakeBuild.buildCakeCommand();
 
-        assertEquals("build.sh", command);
+        assertEquals("./build.sh", command);
     }
 
 }

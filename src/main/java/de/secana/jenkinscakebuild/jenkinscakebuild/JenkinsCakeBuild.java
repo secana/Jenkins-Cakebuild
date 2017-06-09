@@ -2,10 +2,9 @@ package de.secana.jenkinscakebuild.jenkinscakebuild;
 import hudson.Launcher;
 import hudson.Extension;
 import hudson.FilePath;
+import hudson.Proc;
+import hudson.model.*;
 import hudson.util.FormValidation;
-import hudson.model.AbstractProject;
-import hudson.model.Run;
-import hudson.model.TaskListener;
 import hudson.tasks.Builder;
 import hudson.tasks.BuildStepDescriptor;
 import jenkins.tasks.SimpleBuildStep;
@@ -15,7 +14,9 @@ import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.QueryParameter;
 
 import javax.servlet.ServletException;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Sample {@link Builder}.
@@ -33,7 +34,7 @@ import java.io.IOException;
  *
  * @author Kohsuke Kawaguchi
  */
-public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
+public class JenkinsCakeBuild extends Builder {
 
     private String bootstrapperScipt;
     private String target;
@@ -44,10 +45,10 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
     public JenkinsCakeBuild(String bootstrapperScipt, String target, String arguments) {
 
         DefaultValueProvider defaultValueProvider = new DefaultValueProvider(new OSChecker());
-        SetParameters(bootstrapperScipt, target, arguments, defaultValueProvider);
+        setParameters(bootstrapperScipt, target, arguments, defaultValueProvider);
     }
 
-    public void SetParameters(
+    public void setParameters(
             String bootstrapperScipt,
             String target,
             String arguments,
@@ -55,12 +56,12 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
     {
         this.arguments = arguments;
 
-        if(!IsEmptyOrNull(target))
+        if(!isEmptyOrNull(target))
             this.target = defaultValueProvider.GetTargetParameter() + " " + target;
         else
             this.target = null;
 
-        if(IsEmptyOrNull(bootstrapperScipt)) {
+        if(isEmptyOrNull(bootstrapperScipt)) {
             this.bootstrapperScipt = defaultValueProvider.GetBootstrapperScriptName();
         }
         else {
@@ -68,7 +69,7 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
         }
     }
 
-    private boolean IsEmptyOrNull(String s){
+    private boolean isEmptyOrNull(String s){
         if(s == null)
             return true;
 
@@ -78,13 +79,13 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
         return false;
     }
 
-    public String BuildCakeCommand(){
-        String format = String.format("%s %s %s", NullToEmpty(bootstrapperScipt), NullToEmpty(target), NullToEmpty(arguments));
+    public String buildCakeCommand(){
+        String format = String.format("%s %s %s", nullToEmpty(bootstrapperScipt), nullToEmpty(target), nullToEmpty(arguments));
         return format.trim();
     }
 
-    private String NullToEmpty(String s){
-        if(IsEmptyOrNull(s))
+    private String nullToEmpty(String s){
+        if(isEmptyOrNull(s))
             return "";
 
         return s;
@@ -102,18 +103,33 @@ public class JenkinsCakeBuild extends Builder implements SimpleBuildStep {
     public String getArguments() { return arguments; }
 
     @Override
-    public void perform(Run<?,?> build, FilePath workspace, Launcher launcher, TaskListener listener) {
+    public boolean perform(AbstractBuild build, Launcher launcher, BuildListener listener) {
         // This is where you 'build' the project.
-        // Since this is a dummy, we just say 'hello world' and call that a build.
 
-        listener.getLogger().println("Bootstrapper script: " + NullToEmpty(bootstrapperScipt));
-        listener.getLogger().println("Target: " + NullToEmpty(target));
-        listener.getLogger().println("Arguments: " + NullToEmpty(arguments));
+        listener.getLogger().println("Bootstrapper script: " + nullToEmpty(bootstrapperScipt));
+        listener.getLogger().println("Target: " + nullToEmpty(target));
+        listener.getLogger().println("Arguments: " + nullToEmpty(arguments));
 
-        String command = BuildCakeCommand();
+        String command = buildCakeCommand();
 
         listener.getLogger().println("Command: " + command);
+
+        try {
+            Proc proc = launcher.launch("bash -c 'pwd'", build.getEnvVars(), listener.getLogger(), build.getProject().getWorkspace());
+            int exitCode = proc.join();
+            return exitCode == 0;
+        } catch (IOException e) {
+            e.printStackTrace();
+            listener.getLogger().println("IOException !");
+            return false;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            listener.getLogger().println("InterruptedException!");
+            return false;
+        }
+
     }
+
 
     // Overridden for better type safety.
     // If your plugin doesn't really define any property on Descriptor,

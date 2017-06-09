@@ -12,13 +12,13 @@ public class DefaultValueProvider implements IDefaultValueProvider {
     @Override
     public String GetBootstrapperScriptName(){
         if(osChecker.IsLinux())
-            return "build.sh";
+            return "./build.sh";
 
         if(osChecker.IsWindows())
             return "build.ps1";
 
         // assume some Unix if not Linux or Windows
-        return "build.sh";
+        return "./build.sh";
     }
 
     @Override

@@ -16,7 +16,7 @@ public class DefaultValueProviderTest {
 
         String bootstrapper = defaultValueProvider.GetBootstrapperScriptName();
 
-        assertEquals("build.sh", bootstrapper);
+        assertEquals("./build.sh", bootstrapper);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class DefaultValueProviderTest {
 
         String bootstrapper = defaultValueProvider.GetBootstrapperScriptName();
 
-        assertEquals("build.sh", bootstrapper);
+        assertEquals("./build.sh", bootstrapper);
     }
 
     @Test
