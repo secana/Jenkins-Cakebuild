@@ -32,7 +32,7 @@ public class JenkinsCakeBuildTest {
         jenkinsCakeBuild.setParameters("booty","targy", "argy", defaultValueProvider);
 
         assertEquals("booty", jenkinsCakeBuild.getBootstrapperScipt());
-        assertEquals("--target targy", jenkinsCakeBuild.getTarget());
+        assertEquals("--target targy", jenkinsCakeBuild.getInternalTarget());
         assertEquals("argy", jenkinsCakeBuild.getArguments());
     }
 

@@ -1,22 +1,20 @@
 package de.secana.jenkinscakebuild.jenkinscakebuild;
-import hudson.Launcher;
 import hudson.Extension;
-import hudson.FilePath;
+import hudson.Launcher;
 import hudson.Proc;
-import hudson.model.*;
-import hudson.util.FormValidation;
-import hudson.tasks.Builder;
+import hudson.model.AbstractBuild;
+import hudson.model.AbstractProject;
+import hudson.model.BuildListener;
 import hudson.tasks.BuildStepDescriptor;
-import jenkins.tasks.SimpleBuildStep;
+import hudson.tasks.Builder;
+import hudson.util.FormValidation;
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.QueryParameter;
+import org.kohsuke.stapler.StaplerRequest;
 
 import javax.servlet.ServletException;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * Sample {@link Builder}.
@@ -40,6 +38,10 @@ public class JenkinsCakeBuild extends Builder {
     private String target;
     private String arguments;
 
+
+    private String intenralBoostrapperScript;
+    private String internalTarget;
+
     // Fields in config.jelly must match the parameter names in the "DataBoundConstructor"
     @DataBoundConstructor
     public JenkinsCakeBuild(String bootstrapperScipt, String target, String arguments) {
@@ -55,11 +57,12 @@ public class JenkinsCakeBuild extends Builder {
             DefaultValueProvider defaultValueProvider)
     {
         this.arguments = arguments;
+        this.target = target;
 
         if(!isEmptyOrNull(target))
-            this.target = defaultValueProvider.GetTargetParameter() + " " + target;
+            this.internalTarget = defaultValueProvider.GetTargetParameter() + " " + target;
         else
-            this.target = null;
+            this.internalTarget = null;
 
         if(isEmptyOrNull(bootstrapperScipt)) {
             this.bootstrapperScipt = defaultValueProvider.GetBootstrapperScriptName();
@@ -80,7 +83,7 @@ public class JenkinsCakeBuild extends Builder {
     }
 
     public String buildCakeCommand(){
-        String format = String.format("%s %s %s", nullToEmpty(bootstrapperScipt), nullToEmpty(target), nullToEmpty(arguments));
+        String format = String.format("%s %s %s", nullToEmpty(bootstrapperScipt), nullToEmpty(internalTarget), nullToEmpty(arguments));
         return format.trim();
     }
 
@@ -101,6 +104,8 @@ public class JenkinsCakeBuild extends Builder {
     public String getTarget() { return target; }
 
     public String getArguments() { return arguments; }
+
+    public String getInternalTarget() { return internalTarget; }
 
     @Override
     public boolean perform(AbstractBuild build, Launcher launcher, BuildListener listener) {
