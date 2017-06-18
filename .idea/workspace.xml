@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="169868f6-c864-4876-af4d-e51fc604820c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jenkins-cakebuild.iml" afterPath="$PROJECT_DIR$/jenkins-cakebuild.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +41,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -130,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProvider.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -753,7 +755,8 @@
     <MESSAGE value="fixed but which lead to wrong target on multiple runs" />
     <MESSAGE value="fixed bug that happen when the job was executed multiple times" />
     <MESSAGE value="plugin seems to work as intended" />
-    <option name="LAST_COMMIT_MESSAGE" value="plugin seems to work as intended" />
+    <MESSAGE value="code clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="code clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1049,8 +1052,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding />
         </state>
       </provider>
