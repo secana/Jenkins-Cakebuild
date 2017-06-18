@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="169868f6-c864-4876-af4d-e51fc604820c" name="Default" comment="fixed but which lead to wrong target on multiple runs">
+    <list default="true" id="169868f6-c864-4876-af4d-e51fc604820c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jenkins-cakebuild.iml" afterPath="$PROJECT_DIR$/jenkins-cakebuild.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" afterPath="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java" afterPath="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +22,46 @@
       <file leaf-file-name="JenkinsCakeBuild.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="107" column="63" lean-forward="false" selection-start-line="107" selection-start-column="63" selection-end-line="107" selection-end-column="63" />
+            <state relative-caret-position="190">
+              <caret line="203" column="4" lean-forward="false" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="4" />
+              <folding>
+                <element signature="e#4508#4509#0" expanded="true" />
+                <element signature="e#4568#4569#0" expanded="true" />
+                <element signature="e#5538#5539#0" expanded="true" />
+                <element signature="e#5568#5569#0" expanded="true" />
+                <element signature="e#6883#6884#0" expanded="true" />
+                <element signature="e#7744#7745#0" expanded="true" />
+                <element signature="e#7784#7785#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.jelly" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/global.jelly">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.jelly" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/config.jelly">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help-bootstrapperScript.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/help-bootstrapperScript.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,8 +118,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/config.jelly" />
         <option value="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/DefaultValueProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java" />
       </list>
     </option>
   </component>
@@ -107,7 +143,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1920" />
-    <option name="height" value="914" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -660,10 +696,11 @@
     <option name="totallyTimeSpent" value="18412000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="914" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2832618" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -704,7 +741,8 @@
     <MESSAGE value="build command string" />
     <MESSAGE value="command execution works with fake command" />
     <MESSAGE value="fixed but which lead to wrong target on multiple runs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed but which lead to wrong target on multiple runs" />
+    <MESSAGE value="fixed bug that happen when the job was executed multiple times" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug that happen when the job was executed multiple times" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,7 +759,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5568#5569#0" expanded="true" />
+            <element signature="e#6883#6884#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,7 +785,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5568#5569#0" expanded="true" />
+            <element signature="e#6883#6884#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -757,7 +811,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5568#5569#0" expanded="true" />
+            <element signature="e#6883#6884#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -775,7 +837,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5568#5569#0" expanded="true" />
+            <element signature="e#6883#6884#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -793,7 +863,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-          <folding />
+          <folding>
+            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5568#5569#0" expanded="true" />
+            <element signature="e#6883#6884#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -866,13 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/global.jelly">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/index.jelly">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -890,24 +961,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/help-bootstrapperScript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/IDefaultValueProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/config.jelly">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -937,6 +994,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/global.jelly">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/config.jelly">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild/help-bootstrapperScript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuildTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -949,9 +1030,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/secana/jenkinscakebuild/jenkinscakebuild/JenkinsCakeBuild.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="107" column="63" lean-forward="false" selection-start-line="107" selection-start-column="63" selection-end-line="107" selection-end-column="63" />
-          <folding />
+        <state relative-caret-position="190">
+          <caret line="203" column="4" lean-forward="false" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="4" />
+          <folding>
+            <element signature="e#4508#4509#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5568#5569#0" expanded="true" />
+            <element signature="e#6883#6884#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7784#7785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
