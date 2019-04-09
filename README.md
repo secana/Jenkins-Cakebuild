@@ -1,7 +1,7 @@
 # Jenkins-Cakebuild
 Plugin for the Jenkins build server to run Cake scripts
 
-NOT DEVELOP ANY FUTHER!!!
+NOT DEVELOPED ANY FUTHER!!!
 
 ## Build plugin
 To build a plugin that can be uploaded to Jenkins run: `mvn package`
